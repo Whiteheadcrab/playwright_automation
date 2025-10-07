@@ -1,5 +1,5 @@
 //import playwright annotation
-const {test, firefox} = require('@playwright/test');
+const {test, firefox, expect} = require('@playwright/test');
 
 //Test case creation 
 //added async for await functional
@@ -12,10 +12,17 @@ test('Browser Context Playwright test' , async ({browser})=>
         //open new page
         const page = await browser.newPage();
         await page.goto("https://rahulshettyacademy.com/client");
+
+        //get title - assertion 
+        console.log(await page.title());
     });
     
 
 test('Page Playwright test' , async ({page})=>
 {
     await page.goto("https://google.com");
+
+    //get title - assertion 
+    console.log(await page.title());
+    await expect(page).toHaveTitle("Google");
 });
