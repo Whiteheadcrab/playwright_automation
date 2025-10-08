@@ -18,10 +18,12 @@ const config = ({
   /* Run tests in files in parallel */
     use: {
       /*Use firefox as browser*/
-      browserName: 'firefox'
-
+      browserName: 'firefox',
+      /*Not opening browser during testing*/
+      headless : true
   },
 });
 
+/*Using created config*/
 module.exports = config
 
