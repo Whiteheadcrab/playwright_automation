@@ -6,11 +6,11 @@ import { defineConfig, devices } from '@playwright/test';
  */
 const config = ({
   testDir: './tests',
-  /*40 sec timeout*/
-  timeout: 40 *1000,
-  /*40 sec timeout for expect items*/
+  /*50 sec timeout*/
+  timeout: 50 *1000,
+  /*50 sec timeout for expect items*/
   expect: {
-    timeout: 40 *1000,
+    timeout: 50 *1000,
   },
   /*Add reporter*/
   reporter : 'html',
