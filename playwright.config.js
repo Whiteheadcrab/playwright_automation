@@ -20,7 +20,11 @@ const config = ({
       /*Use firefox as browser*/
       browserName: 'firefox',
       /*Not opening browser during testing*/
-      headless : true
+      headless : true,
+      /*Allow to create screenshout on each automatic steps*/
+      screenshot : 'on',
+      /*Anable trace log recording*/
+      trace : 'on'
   },
 });
 

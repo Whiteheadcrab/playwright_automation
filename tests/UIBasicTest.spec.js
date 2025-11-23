@@ -97,7 +97,7 @@ test('@Web Client App login', async ({ page }) => {
        //Create object for appearing document request
        const documentLink = page.locator("[href*='documents-request']");
     
-       //an action (like a click) triggers an event (like a new page opening) — and you want to wait for both in a race-free way.
+       //Used when an action (like a click) triggers an event (like a new page opening) — and you want to wait for both in a race-free way.
        const [newPage]=await Promise.all(
       [
          context.waitForEvent('page'),//listen for any new page pending,rejected,fulfilled
